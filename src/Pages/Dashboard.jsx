@@ -5,13 +5,25 @@ import mask from '../assets/mask.png';
 import cardLogo from '../assets/card logo.png';
 import { FaArrowDown, FaArrowUp, FaCog, FaExclamation, FaUser, FaWallet } from 'react-icons/fa';
 import { activities, transactions } from '../common/Helper';
+import { FiLogOut } from 'react-icons/fi';
 
 function Dashboard() {
 
     return (
         <div className='py-[40px]  px-5 w-full container custom_container mx-auto '>
-            <div className=''>
-                <h1 className='text-white text-2xl font-medium '>Dashboard</h1>
+            <div className='flex justify-between'>
+                <div className=''>
+                    <h1 className='text-white text-2xl font-medium '>Dashboard</h1>
+                </div>
+                {/* Logout Section */}
+                <div className="xl:hidden group  py-2 text-[#FF0000]">
+                    <div className=" px-8 whitespace-nowrap">
+                        <div className="flex items-center gap-3 cursor-pointer text-[#FF0000]">
+                            <FiLogOut className="text-2xl" />
+                            <span className="font-medium text-sm text-[#909090]">Logout</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className='flex justify-between mt-[33px] flex-col 2xl:flex-row gap-7 '>
@@ -29,7 +41,7 @@ function Dashboard() {
 
                                 <div className="mt-6 !grid grid-cols-1 lg:grid-cols-2 gap-5">
                                     {/* Card 1 - Servers */}
-                                    <div className=" border border-gray-700 w-[350px] lg:h-[205px] rounded-xl overflow-hidden shadow-lg bg-[#00000061] backdrop-blur-[120px]">
+                                    <div className=" border border-gray-700 w-[350px] lg:h-[205px] rounded-xl overflow-hidden shadow-lg bg-[#00000061] backdrop-blur-[120px] z-50">
 
                                         <div className=" z-10 p-4 text-white h-full flex flex-col justify-between  ">
                                             <div className="flex items-center gap-2">
@@ -40,7 +52,7 @@ function Dashboard() {
 
                                                 </div>
                                                 <div>
-                                                    <h4 className="xl:text-3xl text-xl font-medium">Servers</h4>
+                                                    <h3 className="xl:text-3xl text-xl font-medium">Servers</h3>
                                                     <p className="xl:text-base text-sm font-normal text-gray-400">All Servers</p>
                                                 </div>
                                             </div>
@@ -55,7 +67,7 @@ function Dashboard() {
                                     </div>
 
                                     {/* Card 2 - Transactions */}
-                                    <div className=" border border-gray-700  lg:h-[205px] rounded-xl overflow-hidden shadow-lg  backdrop-blur-[120px] bg-[#0f0202] z-50">
+                                    <div className=" border border-gray-700  lg:h-[205px] rounded-xl overflow-hidden shadow-lg  backdrop-blur-[120px] bg-[#00000061] z-50">
 
                                         <div className=" z-10 p-4 text-white h-full flex flex-col justify-between">
                                             <div className="flex items-center gap-2">
@@ -83,7 +95,7 @@ function Dashboard() {
                             </div>
                             <div className=''>
                                 <button className="bg-[linear-gradient(274.42deg,#FF00004D,#FF00008A)] text-white lg:px-4 px-2 py-2 rounded border-2 border-[#FF0000]">
-                                     New Server ↗
+                                    New Server ↗
                                 </button>
                             </div>
                         </div>
@@ -97,9 +109,9 @@ function Dashboard() {
                 {/* Right Card */}
                 <div className="relative w-full 2xl:w-1/4 p-4 bg-[#00000061] rounded-xl text-white  ">
                     {/* Header */}
-                    <div className="flex items-center justify-between mb-6 bg-[#00000061] p-2 rounded-[20px] ">
+                    <div className="flex items-center justify-between mb-6 bg-[#00000061] z-50 p-2 rounded-[20px] ">
                         <div className="flex items-center gap-2">
-                            <div className="bg-red-600 p-2 rounded-full">
+                            <div className="text-red-600 p-2 rounded-full">
                                 <FaUser size={20} />
                             </div>
                             <div className=''>
@@ -153,7 +165,7 @@ function Dashboard() {
                         <span></span>
                         <span>Status</span>
                     </div>
-                    <div className='mt-7'>
+                    <div className=''>
                         {activities.map((item, index) => (
                             <div key={index} className="mb-3">
                                 <p className="text-sm font-normal mt-[21px]">{item.text}</p>
