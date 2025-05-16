@@ -29,8 +29,6 @@ function Dashboard() {
                 <div className='w-full 2xl:w-9/12  border border-gray-700  text-white bg-[#00000061]  rounded-[20px] relative'>
 
                     <div className='flex flex-col justify-between px-[33px] pt-[34px] pb-[50px] w-full h- full'>
-
-                        {/* Welcome Section */}
                         <div className='flex justify-between items-start'>
                             <div className=''>
                                 <p className="text-2xl font-normal text-[#8B8B8B]">Welcome back,</p>
@@ -98,15 +96,12 @@ function Dashboard() {
                                     </span>
                                 </button>
                             </div>
-
-
                         </div>
                         <div className='absolute bottom-0 right-0 z hidden md:block'>
-                            <img src={mask} alt="#" />
+                            <img className='w-[340px]' src={mask} alt="#" />
                         </div>
                     </div>
                 </div>
-
 
                 {/* Right Card */}
                 <div className="relative w-full 2xl:w-1/4 p-4 bg-[#00000061] rounded-xl text-white  ">
