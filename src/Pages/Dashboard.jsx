@@ -102,7 +102,7 @@ function Dashboard() {
 
                         </div>
                         <div className='absolute bottom-0 right-0 z'>
-                            <img className='' src={mask} alt="#" />
+                            <img src={mask} alt="#" />
                         </div>
                     </div>
                 </div>

@@ -16,10 +16,10 @@ function Aside() {
     return (
         <>
             {/* Sidebar for xl and above */}
-            <aside className="h-[calc(100vh-40px)] overflow-y-scroll sticky top-0 bottom-0 py-5 px-6 hidden xl:block border rounded-[33px]">
+            <aside className="h-[calc(100vh-40px)] overflow-y-scroll sticky top-0 bottom-0 py-5 px-6 hidden xl:block border rounded-[33px] ">
                 <div className="flex flex-col justify-between h-[calc(100vh-100px)]">
                     <div className="mt-10 md:mt-6 h-full">
-                        <img className="px-3 py-2 sticky top-0 z-50" src={Logo} alt="logo" />
+                        <img className="px-3 py-2 sticky top-0 z-50 " src={Logo} alt="logo" />
                         <SidebarLinks />
                     </div>
 
@@ -36,10 +36,10 @@ function Aside() {
             </aside>
 
             {/* Bottom Navigation for smaller screens */}
-            <nav className="xl:hidden fixed bottom-0 left-0 right-0 bg-[#000] border-t border-gray-300 py-6 px-4 flex justify-between items-center shadow-md z-[99]">
+            <nav className="xl:hidden fixed bottom-0 left-0 right-0 bg-[#000] border-t border-gray-300 py-6 px-4 flex justify-between items-center shadow-md z-[99] ">
                 <MobileNavLink to="/" icon={DashboardIcon} label="Dashboard" />
                 <MobileNavLink to="/services" icon={MyServer} label="Servers" />
-                <MobileNavLink to="/Customer" icon={OrderMyServer} label="New Server" />
+                <MobileNavLink to="/Customer" icon={OrderMyServer} label="Order New Server" />
                 <MobileNavLink to="/Setting" icon={TopUp} label="Top Up" />
                 <MobileNavLink to="/Subscription" icon={Transactions} label="Txns" />
                 <MobileNavLink to="/Support" icon={Support} label="Support" />
@@ -55,7 +55,7 @@ const SidebarLinks = () => (
             <SidebarLink to="/" icon={DashboardIcon} label="Dashboard" />
         </div>
         <SidebarLink to="/services" icon={MyServer} label="My Servers" />
-        <SidebarLink to="/Customer" icon={OrderMyServer} label="New Server" />
+        <SidebarLink to="/Customer" icon={OrderMyServer} label=" New Server" />
         <SidebarLink to="/Setting" icon={TopUp} label="Top Up" />
         <SidebarLink to="/Subscription" icon={Transactions} label="Transactions" />
         <hr className="w-full border-gray-300 mt-5" />
@@ -68,7 +68,7 @@ const SidebarLink = ({ to, icon: Icon, label }) => (
     <NavLink
         to={to}
         className={({ isActive }) =>
-            `group flex items-center gap-3 py-[14px] px-6 rounded-2xl mt-6 cursor-pointer transition-colors duration-300 ${isActive
+            ` group flex items-center gap-3 py-[14px] px-6 rounded-2xl mt-6 cursor-pointer  ${isActive
                 ? "bg-[linear-gradient(274.42deg,#FF00004D,#FF00008A)] text-white"
                 : "text-gray-600 hover:text-white hover:bg-[linear-gradient(274.42deg,#FF00004D,#FF00008A)]"
             }`
@@ -77,7 +77,7 @@ const SidebarLink = ({ to, icon: Icon, label }) => (
         {({ isActive }) => (
             <>
                 <Icon strokeColor={isActive ? "#FFFFFF" : "#909090"} fill={isActive ? "#FFFFFF" : "#909090"} />
-                <span className="font-normal text-sm">{label}</span>
+                <span className="font-normal text-sm group-hover:text-white">{label}</span>
             </>
         )}
     </NavLink>
@@ -87,16 +87,14 @@ const MobileNavLink = ({ to, icon: Icon, label }) => (
     <NavLink
         to={to}
         className={({ isActive }) =>
-            `group flex flex-col items-center text-xs transition-all duration-300 ${isActive
-                ? "text-white"
-                : "text-gray-500 hover:text-white"
+            `flex flex-col items-center text-xs ${isActive ? "text-red-600" : "text-gray-500"
             }`
         }
     >
         {({ isActive }) => (
             <>
                 <Icon strokeColor={isActive ? "#FFFFFF" : "#909090"} fill={isActive ? "#FFFFFF" : "#909090"} />
-                <span className="font-normal text-sm mt-1">{label}</span>
+                <span className="font-normal text-sm group-hover:text-white">{label}</span>
             </>
         )}
     </NavLink>
