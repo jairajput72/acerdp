@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/png/logo.png";
 import {
     Api,
     DashboardIcon,

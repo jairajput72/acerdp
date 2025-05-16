@@ -1,6 +1,6 @@
 import React from 'react';
-import mask from '../assets/mask.png';
-import cardLogo from '../assets/card logo.png';
+import mask from '../assets/png/mask.png';
+import cardLogo from '../assets/png/card logo.png';
 import { FaCog, FaUser, FaWallet } from 'react-icons/fa';
 import { activities, transactions } from '../common/Helper';
 import { FiLogOut } from 'react-icons/fi';
@@ -75,7 +75,7 @@ function Dashboard() {
 
                                                 </div>
                                                 <div>
-                                                    <h4 className="xl:text-3xl text-xl font-medium">Transactions</h4>
+                                                    <h3 className="xl:text-3xl text-xl font-medium">Transactions</h3>
                                                     <p className="xl:text-base text-sm font-normal text-gray-400">All Transactions</p>
                                                 </div>
                                             </div>
