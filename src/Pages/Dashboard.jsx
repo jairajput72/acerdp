@@ -11,7 +11,7 @@ function Dashboard() {
         <div className='py-[40px]  px-5 w-full container custom_container mx-auto '>
             <div className='flex justify-between'>
                 <div className=''>
-                    <h1 className='text-white text-2xl font-medium '>Dashboard</h1>
+                    <h1 className='text-white text-2xl font-medium'>Dashboard</h1>
                 </div>
                 {/* Logout Section */}
                 <div className="xl:hidden group  py-2 text-[#FF0000]">
@@ -101,7 +101,7 @@ function Dashboard() {
 
 
                         </div>
-                        <div className='absolute bottom-0 right-0 z'>
+                        <div className='absolute bottom-0 right-0 z hidden md:block'>
                             <img src={mask} alt="#" />
                         </div>
                     </div>
