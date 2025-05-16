@@ -1,9 +1,7 @@
 import React from 'react';
-import img from '../assets/card bgc.png';
-import blackbg from '../assets/black bg.png';
 import mask from '../assets/mask.png';
 import cardLogo from '../assets/card logo.png';
-import { FaArrowDown, FaArrowUp, FaCog, FaExclamation, FaUser, FaWallet } from 'react-icons/fa';
+import { FaCog, FaUser, FaWallet } from 'react-icons/fa';
 import { activities, transactions } from '../common/Helper';
 import { FiLogOut } from 'react-icons/fi';
 
@@ -30,7 +28,6 @@ function Dashboard() {
                 {/* Left Card */}
                 <div className='w-full 2xl:w-9/12  border border-gray-700  text-white bg-[#00000061]  rounded-[20px] relative'>
 
-                    {/* Overlay Content */}
                     <div className='flex flex-col justify-between px-[33px] pt-[34px] pb-[50px] w-full h- full'>
 
                         {/* Welcome Section */}
