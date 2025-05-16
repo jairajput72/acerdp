@@ -97,8 +97,8 @@ function Dashboard() {
                                 </button>
                             </div>
                         </div>
-                        <div className='absolute bottom-0 right-0 z hidden md:block'>
-                            <img className='w-[340px]' src={mask} alt="#" />
+                        <div className='absolute bottom-0 right-0 z'>
+                            <img src={mask} alt="#" />
                         </div>
                     </div>
                 </div>
