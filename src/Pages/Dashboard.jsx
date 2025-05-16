@@ -38,7 +38,7 @@ function Dashboard() {
 
                                 <div className="mt-6 !grid grid-cols-1 lg:grid-cols-2 gap-5">
                                     {/* Card 1 - Servers */}
-                                    <div className=" border border-gray-700 w-[350px] lg:h-[205px] rounded-xl overflow-hidden shadow-lg bg-[#00000061] backdrop-blur-[120px] z-50">
+                                    <div className=" border border-gray-700 w-[350px] lg:h-[205px] rounded-xl overflow-hidden shadow-lg bg-[#00000061] backdrop-blur-[120px] z-50 ">
 
                                         <div className=" z-10 p-4 text-white h-full flex flex-col justify-between  ">
                                             <div className="flex items-center gap-2">
@@ -90,14 +90,19 @@ function Dashboard() {
                                     </div>
                                 </div>
                             </div>
-                            <div className=''>
-                                <button className="bg-[linear-gradient(274.42deg,#FF00004D,#FF00008A)] text-white lg:px-4 px-2 py-2 rounded border-2 border-[#FF0000]">
-                                    New Server ↗
+                            <div className="z-50">
+                                <button className="group bg-[linear-gradient(274.42deg,#FF00004D,#FF00008A)] text-white xl:px-4 px-2 py-2 rounded border-2 border-[#FF0000] hover:bg-red-700 whitespace-nowrap transition-all duration-300 ease-in-out">
+                                    New Server
+                                    <span className="inline-block transform  transition-all duration-300 ease-in-out  group-hover:rotate-[45deg] group-hover:translate-x-2">
+                                        ↗
+                                    </span>
                                 </button>
                             </div>
+
+
                         </div>
-                        <div className='absolute bottom-0 right-0'>
-                            <img className='w-[350px]' src={mask} alt="#" />
+                        <div className='absolute bottom-0 right-0 z'>
+                            <img className='' src={mask} alt="#" />
                         </div>
                     </div>
                 </div>
@@ -140,7 +145,7 @@ function Dashboard() {
                     {/* Buttons */}
                     <div className="flex items-center justify-between xl:mt-[66px]">
                         <button className="xl:text-xl text-lg font-normal text-[#C7C7C7]">Redeem Code</button>
-                        <button className="bg-[linear-gradient(274.42deg,#FF00004D,#FF000014)]  hover:bg-red-700  text-white px-5 xl:py-3 py-2 rounded font-medium xl:text-xl text-lg border-[#FF0000] border">
+                        <button className="bg-[linear-gradient(274.42deg,#FF00004D,#FF000014)]  hover:bg-red-700  text-white px-5 xl:py-3 py-2 rounded font-medium xl:text-xl text-lg border-[#FF0000] border inline-block transform  transition-all duration-300 ">
                             Top Up
                         </button>
                     </div>
